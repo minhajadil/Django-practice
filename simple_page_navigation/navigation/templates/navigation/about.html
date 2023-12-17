@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="/"> Home </a></h1>
+    <h1> <a href="/navigation/about/"> About</a> </h1>
+    <h1> <a href="/navigation/contact/">Contact</a> </h1>
+    <h2>{{author}}</h2>
+    <h2>{{age}}</h2>
+    <h1>first app about</h1>
+    
+    
+    {% if age == 20 %}
+    <h2>this is a boro baccha</h2>
+    {% else %}
+    <h2>choto baccha</h2>
+    {% endif %}
+
+    {% for i in courses  %}
+    <h3>{{i.id}} {{i.name}}</h3>
+    {% endfor %}
+
+
+
+</body>
+</html>
