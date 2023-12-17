@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    
+
+    <h2>add :{{ posts.0.age  | add:"2" }}</h2>
+    <h2>capfirst : {{ posts.0.author | capfirst }}</h2>
+    <h2>cut : {{ posts.0.title | cut:" "}}</h2>
+   <h2>date {{posts.0.date_posted  | date:"D d M Y" }}</h2> 
+   <h2>default : {{ posts.0.name | default:"nothing" }}  </h2>
+   {% comment %} <p>dictsort : {{ posts | dictsort:"title" }}</p> {% endcomment %}
+   <h2>divisible : {{ posts.0.age | divisibleby:"2" }}</h2>
+   <h2> file size format : {{ posts.0.page | filesizeformat }}</h2>
+   <h2>first : {{ posts.3 | first }}</h2>
+   <h2>join : {{ posts.3 | join:" // " }}</h2>
+   <h2>length :{{ posts.3 | length }}</h2>
+   {% comment %} <h2>line numbers : {{ posts.3 | linenumbers }}</h2> {% endcomment %}
+   <h2>make lower : {{ posts.0.title | lower }}</h2>
+   <h2>random : {{ posts.3 | random }}</h2>
+   <h2>slice : {{ posts.3 | slice:":2" }}</h2>
+   <h2>truncatechars {{ posts.0.content | truncatechars:10 }} </h2>
+   <h2>word count : {{ posts.0.content | wordcount }}</h2>
+
+
+    
+</body>
+</html>
