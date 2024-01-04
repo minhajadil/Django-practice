@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+
+{% load crispy_forms_tags %}
+
+
+{% if messages %}
+    {% for message in messages %}
+   <h1 class="text-success  ">{{message}}</h1>
+
+    {% endfor %}
+
+{% endif %}
+
+<h1>Welcome {{user}}</h1> 
+
+<div class ="p-5">
+  <a class='btn btn-warning ' href="{%url 'passchange1' %}"> Change Password using Old one </a>
+  <a class='btn btn-warning ' href="{%url 'passchange2' %}"> Change Password without Old one </a>
+
+</div>
+
+
+
+
+
+{% endblock content %}
