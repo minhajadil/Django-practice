@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Album list</h1>
+
+<table class="table table-bordered border-dark pt-3">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Musician Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Album Rating</th>
+      <th scope="col">Instrument Type</th>
+      <th scope="col">Album Name</th>
+      <th scope="col">Release date</th>
+      {% if user.is_authenticated %}
+      <th scope="col">Actions</th>
+      {% endif %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for albums in db %}
+
+    <tr>
+      <th scope="row">{{albums.id}}</th>
+      <td>
+        <a
+          style="text-decoration: none; color: inherit"
+          href="{%url 'edit_musician' albums.musician.id%}"
+        >
+          {{albums.musician.First_Name}} {{albums.musician.Last_Name}}
+        </a>
+      </td>
+      <td>{{albums.musician.Email}}</td>
+      <td>{{albums.Rating}}</td>
+      <td>{{albums.musician.Instrument_type}}</td>
+      <td>{{albums.Album_Name}}</td>
+      <td>{{albums.Release_date}}</td>
+      {% if user.is_authenticated %}
+      <td>
+        <a href='{% url "edit_album" albums.id  %}'>Edit</a>
+        <a href='{% url "delete_album" albums.id  %}'>Delete</a>
+      </td>
+      {% endif %}
+    </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
