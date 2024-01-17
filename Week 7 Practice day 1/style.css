@@ -1,0 +1,49 @@
+.Products{
+    width: 1200px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+.navigation-buttons{
+    display: flex;
+    gap :20px ;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+.buttons{
+    border-radius: 5px;
+    padding : 10px 20px ;
+    border:none ;
+    color : rgb(99, 66, 66) ;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+.buttons:hover{
+    border-radius: 5px;
+    padding : 10px 20px ;
+    border:none ;
+    color : white ;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+    background-color: red;
+}
+
+.card-img-top{
+
+    height: 250px;
+
+
+}
+.product-details{
+    width: 1200px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 100px;
+}
